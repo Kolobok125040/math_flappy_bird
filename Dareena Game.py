@@ -1,3 +1,4 @@
+# by Kolobok125040
 import pygame
 import random
 
@@ -93,7 +94,6 @@ def generate_random_math_problem():
     return math_problem, correct_answer, incorrect_answer
 
 font = pygame.font.Font('resouses/fonts/gamefont.ttf', 36)
-
 def draw_text(text, x, y, color, size):
     text_surface = pygame.font.Font('resouses/fonts/gamefont.ttf', size).render(text, False , color)
     text_rect = text_surface.get_rect(topleft=(x, y))
@@ -224,8 +224,8 @@ while running:
                 problem, correct, incorrect = generate_random_math_problem()
                 one_or_zero = random.choice([0, 1])
     else:
-        draw_text("Game over", WIDTH//5 , HEIGHT//2-80, (188, 162, 57), 65)
-        draw_text(f"Score: {score}", WIDTH//2-150 , HEIGHT//2+30, (188, 162, 57), 36)
+        draw_text("Game over", WIDTH//5 , HEIGHT//2-80, (255, 70, 109), 65)
+        draw_text(f"Score: {score}", WIDTH//2-150 , HEIGHT//2+30, (255, 70, 109), 36)
         FPS = 0
     pygame.display.update()
     
